@@ -157,7 +157,7 @@ The best model is selected based on the highest bootstrap mean F1 for class 4 (P
 
 ```
 .
-├── TRSR_File_1_COMPLETED_FINAL.ipynb   # Main notebook (full pipeline)
+├── Ethical AI-based Employee Performance Evaluation System.ipynb   # Main notebook (full pipeline)
 ├── Employee_Performance_Dataset.csv    # Raw dataset (required)
 └── README.md                           # This file
 ```
