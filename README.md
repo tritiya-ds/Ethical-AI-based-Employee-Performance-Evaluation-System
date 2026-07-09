@@ -1,4 +1,4 @@
-# Ethical AI-Based Employee Performance Evaluation System
+# MeritLens: Ethical AI-Powered Employee Performance Evaluation
 
 An end-to-end machine learning pipeline for predicting employee **Performance Ratings** (2, 3, or 4) in an unbiased and ethical manner. The project tackles class imbalance, multicollinearity, and ordinal target structure through a series of rigorously designed experiments.
 
