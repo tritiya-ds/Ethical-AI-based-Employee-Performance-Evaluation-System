@@ -173,7 +173,7 @@ The best model is selected based on the highest bootstrap mean F1 for class 4 (P
 
 2. Place `Employee_Performance_Dataset.csv` in the same directory as the notebook.
 
-3. Open and run `TRSR_File_1_COMPLETED_FINAL.ipynb` top to bottom. All scenarios execute sequentially and final bootstrap results are printed at the end.
+3. Open and run `Ethical AI-based Employee Performance Evaluation System.ipynb` top to bottom. All scenarios execute sequentially and final bootstrap results are printed at the end.
 
 ---
 
