@@ -1,19 +1,24 @@
 # MeritLens: AI-Powered Employee Performance Evaluation
 
-An end-to-end machine learning pipeline for predicting employee **Performance Ratings** (2, 3, or 4) in an unbiased and ethical manner. The project tackles class imbalance, multicollinearity, and ordinal target structure through a series of rigorously designed experiments.
+> A data-driven decision-support system for employee performance analysis, combining
+> machine learning with statistical validation and human-centered evaluation.
 
----
 
-## Project Overview
+## 📌 Project Overview
 
-Employee performance appraisals are high-stakes decisions. Biased or poorly calibrated models can lead to unfair outcomes. This project builds a transparent, statistically validated classification system with the following goals:
+**MeritLens** is an AI-powered employee performance evaluation system designed to provide a data-driven perspective alongside traditional managerial assessments.
 
-- **Predict** ordinal performance ratings (2 = Below Average, 3 = Average, 4 = Above Average)
-- **Minimise bias** through ethical feature selection (VIF-based multicollinearity removal, Variance Inflation Factor)
-- **Handle class imbalance** using ADASYN oversampling
-- **Validate** model superiority via bootstrap-based statistical testing
+Employee performance is influenced by multiple factors, including measurable workplace attributes as well as qualitative observations from managers. While managerial evaluations provide valuable context and human insight, structured data can offer an additional perspective for identifying patterns and supporting more consistent evaluation.
 
----
+The goal of MeritLens is **not to replace managerial judgment or automate performance-related decisions**. Instead, it serves as a **decision-support tool**, helping HR teams and managers analyze employee data, identify relevant patterns, and use model-generated insights as one additional input when reviewing performance.
+
+The system predicts employee performance ratings on an ordinal scale:
+
+- **2 — Below Average**
+- **3 — Average**
+- **4 — Above Average**
+
+
 
 ## Architecture
 ```mermaid
@@ -195,4 +200,5 @@ The best model is selected based on the highest bootstrap mean F1 for class 4 (P
 
 ---
 
-*Built with a focus on ethical, unbiased, statistically validated ML for HR decision support.*
+*Built with a focus on transparent, data-driven and statistically validated
+ML for responsible HR decision support.*
