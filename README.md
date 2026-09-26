@@ -18,6 +18,18 @@ The system predicts employee performance ratings on an ordinal scale:
 - **3 — Average**
 - **4 — Above Average**
 
+The project focuses on building a robust and explainable machine learning pipeline that addresses several practical challenges in employee performance prediction:
+
+- **Ordinal Classification:** Treats performance ratings as ordered categories rather than unrelated classes.
+- **Feature Selection:** Uses VIF-based selection and Recursive Feature Elimination (RFE) to reduce redundancy and identify informative features.
+- **Class Imbalance:** Applies ADASYN oversampling to improve learning for underrepresented performance categories.
+- **Model Comparison:** Evaluates Random Forest, XGBoost, and CatBoost models across different feature-selection strategies.
+- **Hyperparameter Optimization:** Uses `GridSearchCV` with a custom F1-based scoring approach focused on the highest performance category.
+- **Decision Threshold Tuning:** Optimizes probability thresholds to improve identification of the minority high-performance class.
+- **Statistical Validation:** Uses bootstrap resampling, 95% confidence intervals, and pairwise significance testing to assess the reliability of model results.
+
+Overall, **MeritLens demonstrates how machine learning can complement human expertise in employee performance evaluation by providing an additional, transparent, and data-driven perspective while keeping human judgment and organizational context central to the final decision.**
+
 
 
 ## Architecture
