@@ -15,6 +15,23 @@ Employee performance appraisals are high-stakes decisions. Biased or poorly cali
 
 ---
 
+## Architecture
+graph TD
+    A["Raw HR Dataset<br/>1200 rows x 28 columns (Kaggle)"] --> B["Data Cleaning<br/>drop ID column, null check,<br/>experience-consistency sanity check"]
+    B --> C["Categorical Encoding<br/>binary map / label encode /<br/>one-hot / frequency encode"]
+    C --> D["Drop Attrition column<br/>(avoid target leakage)"]
+    D --> E1["VIF-based Feature Selection<br/>iterative collinearity removal<br/>-> 22 features (VIF-23 incl. target)"]
+    D --> E2["RFE Feature Selection<br/>per estimator: RF / XGBoost / CatBoost<br/>-> Top-10 features each"]
+    E1 --> F["EDA<br/>class-imbalance count plot, t-SNE embedding"]
+    E2 --> F
+    F --> G["Ordinal Target Decomposition<br/>Task 1: rating >= 3?  Task 2: rating >= 4?"]
+    G --> H["ADASYN Oversampling<br/>per binary threshold task"]
+    H --> I["Model Training<br/>Random Forest / XGBoost / CatBoost"]
+    I --> J["GridSearchCV<br/>custom F1(Class 4) scorer"]
+    J --> K["Decision-Threshold Tuning<br/>per class-4 probability cutoff"]
+    K --> L["Evaluation<br/>Classification Report + Confusion Matrix<br/>(6 scenarios total)"]
+    L --> M["Bootstrap Validation<br/>B=1000 resamples, 95% CI,<br/>pairwise significance tests"]
+
 ## Dataset
 
 **File:** `Employee_Performance_Dataset.csv`
