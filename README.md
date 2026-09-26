@@ -16,6 +16,7 @@ Employee performance appraisals are high-stakes decisions. Biased or poorly cali
 ---
 
 ## Architecture
+```mermaid
 graph TD
     A["Raw HR Dataset<br/>1200 rows x 28 columns (Kaggle)"] --> B["Data Cleaning<br/>drop ID column, null check,<br/>experience-consistency sanity check"]
     B --> C["Categorical Encoding<br/>binary map / label encode /<br/>one-hot / frequency encode"]
@@ -31,7 +32,7 @@ graph TD
     J --> K["Decision-Threshold Tuning<br/>per class-4 probability cutoff"]
     K --> L["Evaluation<br/>Classification Report + Confusion Matrix<br/>(6 scenarios total)"]
     L --> M["Bootstrap Validation<br/>B=1000 resamples, 95% CI,<br/>pairwise significance tests"]
-
+```
 ## Dataset
 
 **File:** `Employee_Performance_Dataset.csv`
